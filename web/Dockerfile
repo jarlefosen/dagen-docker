@@ -15,3 +15,5 @@ COPY www/ www/
 
 RUN rm -rf /usr/share/nginx/html && \
  ln -s /app/www /usr/share/nginx/html
+
+CMD http-server -c-1 -p 80 www
