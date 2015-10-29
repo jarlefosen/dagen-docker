@@ -1,0 +1,35 @@
+http:
+  build: http
+  links:
+    - web:web
+    - server:server
+  ports:
+    - 80:80
+
+web:
+  build: web
+
+server:
+  build: server
+  links:
+    - redis:redis
+  environment:
+    - REDIS_DB_HOST=redis
+    - REDIS_DB_PORT=6379
+
+mining:
+  build: mining
+  links:
+    - redis:redis
+  environment:
+    - REDIS_DB_HOST=redis
+    - TWITTER_TAGS=dagenatifi
+    - INSTAGRAM_TAGS=#dagenatifi
+    - TWITTER_CONSUMER_KEY=""
+    - TWITTER_CONSUMER_SECRET=""
+    - TWITTER_TOKEN_KEY=""
+    - TWITTER_TOKEN_SECRET=""
+    - INSTAGRAM_TOKEN_KEY=""
+
+redis:
+  image: redis

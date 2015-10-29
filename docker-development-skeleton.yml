@@ -1,0 +1,48 @@
+http:
+  build: http
+  links:
+    - web:web
+    - server:server
+  volumes:
+    - ./web/www:/app/www
+  ports:
+    - 80:80
+
+web:
+  extends:
+    file: docker-compose.yml
+    service: web
+  volumes:
+    - ./web:/app
+  command: http-server -c -1 -p 80 www
+
+server:
+  build: server
+  links:
+    - redis:redis
+  environment:
+    - REDIS_DB_HOST=redis
+    - REDIS_DB_PORT=6379
+  volumes:
+    - ./server:/app
+  command: nodemon -L server.js
+
+mining:
+  build: mining
+  links:
+    - redis:redis
+  volumes:
+    - ./mining:/app
+  environment:
+    - REDIS_DB_HOST=redis
+    - TWITTER_TAGS=dagenatifi
+    - INSTAGRAM_TAGS=#dagenatifi
+    - TWITTER_CONSUMER_KEY=""
+    - TWITTER_CONSUMER_SECRET=""
+    - TWITTER_TOKEN_KEY=""
+    - TWITTER_TOKEN_SECRET=""
+    - INSTAGRAM_TOKEN_KEY=""
+  command: nodemon -L mining.js
+
+redis:
+  image: redis
