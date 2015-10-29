@@ -1,0 +1,120 @@
+body {
+    background-color: #5E5F5F;
+}
+
+div.header-box{
+    margin-left: auto ;
+    margin-right: auto ;
+    text-align: center;
+}
+
+h1.dagen-header{
+    color: #FFF;
+    font-weight: 900;
+    font-familiy: "Helvetica";
+    font-size:50pt;
+}
+
+
+h1.dagen-header span{
+    color: #55ACEE;
+    font-weight: 900;
+    font-familiy: "Helvetica";
+}
+
+h1.twitter-header  {
+    color: #55ACEE;
+    font-weight: 900;
+    font-familiy: "Helvetica";
+}
+
+h1.instagram-header {
+    color: #55ACEE;
+    font-weight: 900;
+    font-familiy: "Helvetica";
+}
+
+div.twitter-card {
+    border: 2px #ddd solid;
+    border-radius: 5px;
+    min-height: 115px;
+    padding: 5px;
+    background-color: #fff;
+    margin-bottom: 5px;
+
+}
+
+div.twitter-card .username {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #232323;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+div.twitter-card .image {
+
+}
+
+div.twitter-card .post {
+    font-size: 14pt;
+
+}
+
+div.instagram-card {
+    width: 48%;
+    border: 2px #ddd solid;
+    border-radius: 5px;
+    min-height: 115px;
+    padding: 5px;
+    background-color: #fff;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+div.instagram-card .likes{
+
+}
+
+div.instagram-card .comments{
+
+}
+
+div.instagram-card .comments-field{
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+div.instagram-card .image {
+    padding: 20px;
+    margin: 0 auto;
+
+}
+div.instagram-card .user {
+    min-height: 20px;
+}
+
+div.instagram-card .profile-picture {
+    border-top-left-radius: 5px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-size: contain;
+}
+
+div.instagram-card .username {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #232323;
+    height: 40px;
+    line-height: 40px;
+}
+
+div.instagram-card .caption{
+    padding-left: 120px;
+}
