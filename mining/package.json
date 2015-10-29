@@ -1,0 +1,14 @@
+{
+  "name": "mining",
+  "author": "Jarle Fosen <jarlefosen@gmail.com>",
+  "description": "",
+  "main": "mining.js",
+  "scripts": {
+    "start": "node mining.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "redis": "^2.2.5",
+    "twit": "^2.1.1"
+  }
+}
