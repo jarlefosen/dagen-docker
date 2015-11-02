@@ -1,1 +1,3 @@
 www/bower_components/
+.git
+.gitignore
